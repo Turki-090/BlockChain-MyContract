@@ -58,7 +58,7 @@ contract VotingSystem is ERC20, Ownable {
             proposal.noVotes++;
         }
 
-         if (proposal.yesVotes >= 5) {  // Example condition
+         if (proposal.yesVotes >  proposal.noVotes) {
         emit ProposalApproved(proposal.id, proposal.description, proposal.yesVotes, proposal.noVotes);
     }
     }
